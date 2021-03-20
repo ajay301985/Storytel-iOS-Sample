@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AA2450EF2603DC8300A0F095 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2450EE2603DC8300A0F095 /* AppDelegate.swift */; };
+		AA2450F32603DC8300A0F095 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2450F22603DC8300A0F095 /* BookListViewController.swift */; };
+		AA2450F82603DC8500A0F095 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA2450F72603DC8500A0F095 /* Assets.xcassets */; };
+		AA2450FB2603DC8500A0F095 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA2450F92603DC8500A0F095 /* LaunchScreen.storyboard */; };
+		AA2451062603DC8500A0F095 /* StorytelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2451052603DC8500A0F095 /* StorytelTests.swift */; };
+		AA2451232603DD3C00A0F095 /* BookService.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2451222603DD3C00A0F095 /* BookService.swift */; };
+		AA24512B2603DD8100A0F095 /* NetworkRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA24512A2603DD8100A0F095 /* NetworkRequest.swift */; };
+		AA2451312604705700A0F095 /* BookList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2451302604705700A0F095 /* BookList.swift */; };
+		AA2451DA2604B37400A0F095 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2451D92604B37400A0F095 /* ViewControllerExtension.swift */; };
+		AA2451E52604B7DC00A0F095 /* BookViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2451E42604B7DC00A0F095 /* BookViewModel.swift */; };
+		AA2451EA2604C71C00A0F095 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2451E92604C71C00A0F095 /* ImageDownloader.swift */; };
+		AA2451F92606394800A0F095 /* LoaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2451F82606394800A0F095 /* LoaderView.swift */; };
+		AA2451FF260642C100A0F095 /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA2451FE260642C100A0F095 /* BookTableViewCell.swift */; };
+		AA24520826065CC100A0F095 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA24520726065CC100A0F095 /* HeaderView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AA2451022603DC8500A0F095 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AA2450E32603DC8300A0F095 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AA2450EA2603DC8300A0F095;
+			remoteInfo = Storytel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AA2450EB2603DC8300A0F095 /* Storytel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Storytel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA2450EE2603DC8300A0F095 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AA2450F22603DC8300A0F095 /* BookListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
+		AA2450F72603DC8500A0F095 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AA2450FA2603DC8500A0F095 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		AA2450FC2603DC8500A0F095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA2451012603DC8500A0F095 /* StorytelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StorytelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AA2451052603DC8500A0F095 /* StorytelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorytelTests.swift; sourceTree = "<group>"; };
+		AA2451072603DC8500A0F095 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AA2451222603DD3C00A0F095 /* BookService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookService.swift; sourceTree = "<group>"; };
+		AA24512A2603DD8100A0F095 /* NetworkRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequest.swift; sourceTree = "<group>"; };
+		AA2451302604705700A0F095 /* BookList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookList.swift; sourceTree = "<group>"; };
+		AA2451D92604B37400A0F095 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		AA2451E42604B7DC00A0F095 /* BookViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookViewModel.swift; sourceTree = "<group>"; };
+		AA2451E92604C71C00A0F095 /* ImageDownloader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
+		AA2451F82606394800A0F095 /* LoaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoaderView.swift; sourceTree = "<group>"; };
+		AA2451FE260642C100A0F095 /* BookTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
+		AA24520726065CC100A0F095 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AA2450E82603DC8300A0F095 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA2450FE2603DC8500A0F095 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AA2450E22603DC8300A0F095 = {
+			isa = PBXGroup;
+			children = (
+				AA2450ED2603DC8300A0F095 /* Storytel */,
+				AA2451042603DC8500A0F095 /* StorytelTests */,
+				AA2450EC2603DC8300A0F095 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AA2450EC2603DC8300A0F095 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AA2450EB2603DC8300A0F095 /* Storytel.app */,
+				AA2451012603DC8500A0F095 /* StorytelTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AA2450ED2603DC8300A0F095 /* Storytel */ = {
+			isa = PBXGroup;
+			children = (
+				AA24520626065C9700A0F095 /* CustomViews */,
+				AA2451FD2606429900A0F095 /* TableviewCell */,
+				AA2451D82604B35400A0F095 /* Extension */,
+				AA24512F2603DDAB00A0F095 /* Model */,
+				AA2451212603DD2D00A0F095 /* Service */,
+				AA2450EE2603DC8300A0F095 /* AppDelegate.swift */,
+				AA2450F22603DC8300A0F095 /* BookListViewController.swift */,
+				AA2450F72603DC8500A0F095 /* Assets.xcassets */,
+				AA2450F92603DC8500A0F095 /* LaunchScreen.storyboard */,
+				AA2450FC2603DC8500A0F095 /* Info.plist */,
+				AA2451E42604B7DC00A0F095 /* BookViewModel.swift */,
+				AA2451E92604C71C00A0F095 /* ImageDownloader.swift */,
+			);
+			path = Storytel;
+			sourceTree = "<group>";
+		};
+		AA2451042603DC8500A0F095 /* StorytelTests */ = {
+			isa = PBXGroup;
+			children = (
+				AA2451052603DC8500A0F095 /* StorytelTests.swift */,
+				AA2451072603DC8500A0F095 /* Info.plist */,
+			);
+			path = StorytelTests;
+			sourceTree = "<group>";
+		};
+		AA2451212603DD2D00A0F095 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				AA2451222603DD3C00A0F095 /* BookService.swift */,
+				AA24512A2603DD8100A0F095 /* NetworkRequest.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		AA24512F2603DDAB00A0F095 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AA2451302604705700A0F095 /* BookList.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AA2451D82604B35400A0F095 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				AA2451D92604B37400A0F095 /* ViewControllerExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		AA2451FD2606429900A0F095 /* TableviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				AA2451FE260642C100A0F095 /* BookTableViewCell.swift */,
+			);
+			path = TableviewCell;
+			sourceTree = "<group>";
+		};
+		AA24520626065C9700A0F095 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				AA2451F82606394800A0F095 /* LoaderView.swift */,
+				AA24520726065CC100A0F095 /* HeaderView.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AA2450EA2603DC8300A0F095 /* Storytel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA2451152603DC8500A0F095 /* Build configuration list for PBXNativeTarget "Storytel" */;
+			buildPhases = (
+				AA2450E72603DC8300A0F095 /* Sources */,
+				AA2450E82603DC8300A0F095 /* Frameworks */,
+				AA2450E92603DC8300A0F095 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Storytel;
+			productName = Storytel;
+			productReference = AA2450EB2603DC8300A0F095 /* Storytel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AA2451002603DC8500A0F095 /* StorytelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AA2451182603DC8500A0F095 /* Build configuration list for PBXNativeTarget "StorytelTests" */;
+			buildPhases = (
+				AA2450FD2603DC8500A0F095 /* Sources */,
+				AA2450FE2603DC8500A0F095 /* Frameworks */,
+				AA2450FF2603DC8500A0F095 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AA2451032603DC8500A0F095 /* PBXTargetDependency */,
+			);
+			name = StorytelTests;
+			productName = StorytelTests;
+			productReference = AA2451012603DC8500A0F095 /* StorytelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AA2450E32603DC8300A0F095 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					AA2450EA2603DC8300A0F095 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					AA2451002603DC8500A0F095 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = AA2450EA2603DC8300A0F095;
+					};
+				};
+			};
+			buildConfigurationList = AA2450E62603DC8300A0F095 /* Build configuration list for PBXProject "Storytel" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AA2450E22603DC8300A0F095;
+			productRefGroup = AA2450EC2603DC8300A0F095 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AA2450EA2603DC8300A0F095 /* Storytel */,
+				AA2451002603DC8500A0F095 /* StorytelTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AA2450E92603DC8300A0F095 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA2450FB2603DC8500A0F095 /* LaunchScreen.storyboard in Resources */,
+				AA2450F82603DC8500A0F095 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA2450FF2603DC8500A0F095 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AA2450E72603DC8300A0F095 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA2451312604705700A0F095 /* BookList.swift in Sources */,
+				AA2451E52604B7DC00A0F095 /* BookViewModel.swift in Sources */,
+				AA2451EA2604C71C00A0F095 /* ImageDownloader.swift in Sources */,
+				AA2451232603DD3C00A0F095 /* BookService.swift in Sources */,
+				AA2451DA2604B37400A0F095 /* ViewControllerExtension.swift in Sources */,
+				AA2450F32603DC8300A0F095 /* BookListViewController.swift in Sources */,
+				AA2450EF2603DC8300A0F095 /* AppDelegate.swift in Sources */,
+				AA24520826065CC100A0F095 /* HeaderView.swift in Sources */,
+				AA24512B2603DD8100A0F095 /* NetworkRequest.swift in Sources */,
+				AA2451FF260642C100A0F095 /* BookTableViewCell.swift in Sources */,
+				AA2451F92606394800A0F095 /* LoaderView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AA2450FD2603DC8500A0F095 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA2451062603DC8500A0F095 /* StorytelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AA2451032603DC8500A0F095 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AA2450EA2603DC8300A0F095 /* Storytel */;
+			targetProxy = AA2451022603DC8500A0F095 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		AA2450F92603DC8500A0F095 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AA2450FA2603DC8500A0F095 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AA2451132603DC8500A0F095 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AA2451142603DC8500A0F095 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AA2451162603DC8500A0F095 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DA89VY2P5K;
+				INFOPLIST_FILE = Storytel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com..Storytel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AA2451172603DC8500A0F095 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DA89VY2P5K;
+				INFOPLIST_FILE = Storytel/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com..Storytel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AA2451192603DC8500A0F095 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DA89VY2P5K;
+				INFOPLIST_FILE = StorytelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com..StorytelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Storytel.app/Storytel";
+			};
+			name = Debug;
+		};
+		AA24511A2603DC8500A0F095 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = DA89VY2P5K;
+				INFOPLIST_FILE = StorytelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com..StorytelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Storytel.app/Storytel";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AA2450E62603DC8300A0F095 /* Build configuration list for PBXProject "Storytel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA2451132603DC8500A0F095 /* Debug */,
+				AA2451142603DC8500A0F095 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA2451152603DC8500A0F095 /* Build configuration list for PBXNativeTarget "Storytel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA2451162603DC8500A0F095 /* Debug */,
+				AA2451172603DC8500A0F095 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AA2451182603DC8500A0F095 /* Build configuration list for PBXNativeTarget "StorytelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AA2451192603DC8500A0F095 /* Debug */,
+				AA24511A2603DC8500A0F095 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AA2450E32603DC8300A0F095 /* Project object */;
+}
