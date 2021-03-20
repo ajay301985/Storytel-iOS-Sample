@@ -28,15 +28,29 @@ final class ImageDownloader {
     if let image = cache.object(forKey: imagePath as NSString) {
       completionHandler(image)
     } else {
-      let url: URL! = URL(string: imagePath)
-      task = URLSession.shared.downloadTask(with: url, completionHandler: { _, _, _ in
-        if let data = try? Data(contentsOf: url) {
-          let img: UIImage! = UIImage(data: data)
-          self.cache.setObject(img, forKey: imagePath as NSString)
-          completionHandler(img)
-        }
-      })
-      task?.resume()
+      if let url = URL(string: imagePath) {
+        task = URLSession.shared.downloadTask(with: url, completionHandler: { tempUrl, _, error in
+          if error != nil {
+            print(error!.localizedDescription)
+            return
+          }
+
+          if let imageTempUrl = tempUrl {
+            do {
+              let imageData = try Data(contentsOf: imageTempUrl)
+              if let imageObj = UIImage(data: imageData) {
+                self.cache.setObject(imageObj, forKey: imagePath as NSString)
+                completionHandler(imageObj)
+              }
+            } catch {
+              print(error.localizedDescription)
+            }
+          }
+        })
+        task?.resume()
+      } else {
+        assertionFailure("Invalid Image Path \(imagePath)")
+      }
     }
   }
 }
