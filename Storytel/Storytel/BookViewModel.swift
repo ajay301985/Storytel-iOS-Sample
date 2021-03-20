@@ -12,11 +12,17 @@
 import Foundation
 
 final class BookViewModel {
-  // MARK: Internal
-
   var bookList: BookList?
   var isLoading = false
   var books: [Book] = []
+
+  var titleForHeader: String? {
+    return bookList?.query.capitalized
+  }
+
+  var shouldHideHeader: Bool {
+    return false
+  }
 
   func getPlaces(completion: @escaping (Bool, NetworkError?) -> Void) {
     if isLoading == true, books.count == bookList?.totalCount ?? 0 { completion(true, nil)
@@ -38,13 +44,5 @@ final class BookViewModel {
           completion(false, error)
       }
     }
-  }
-
-  var titleForHeader: String? {
-    return bookList?.query.capitalized
-  }
-
-  var shouldHideHeader: Bool {
-    return false
   }
 }

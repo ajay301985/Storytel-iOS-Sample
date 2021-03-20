@@ -7,16 +7,15 @@
 
 import Foundation
 
-
 final class BookService {
-  private static let TIMEOUT_INTERVAL = 60.0
+  // MARK: Internal
 
-  static func getBooks(pageCount:String?, completion: @escaping (Swift.Result<BookList, NetworkError>) -> Void) {
+  static func getBooks(pageCount: String?, completion: @escaping (Swift.Result<BookList, NetworkError>) -> Void) {
     let urlconfig = URLSessionConfiguration.default
     urlconfig.timeoutIntervalForRequest = TIMEOUT_INTERVAL
     URLSession(configuration: urlconfig).dataTask(with: Request.getBooks(pageCount).urlRequest) { data, response, error in
       guard let httpResponse = response as? HTTPURLResponse,
-            (200 ... 299).contains(httpResponse.statusCode)
+        (200 ... 299).contains(httpResponse.statusCode)
       else {
         completion(.failure(NetworkError.error()))
         return
@@ -28,10 +27,14 @@ final class BookService {
         }
         let result = try JSONDecoder().decode(BookList.self, from: data)
         completion(.success(result))
-      } catch (let error) {
+      } catch {
         print(error.localizedDescription)
         completion(.failure(NetworkError.error(code: httpResponse.statusCode)))
       }
     }.resume()
   }
+
+  // MARK: Private
+
+  private static let TIMEOUT_INTERVAL = 60.0
 }

@@ -9,7 +9,6 @@
  description and description2
  */
 
-
 import UIKit
 
 private func descriptionLabel() -> UILabel {
@@ -62,6 +61,11 @@ class BookTableViewCell: UITableViewCell {
     return thumbnail
   }()
 
+  override func prepareForReuse() {
+    super.prepareForReuse()
+    thumbnailImageView.image = UIImage(named: "placeholder.jpg")
+  }
+
   // MARK: Private
 
   private let stackView: UIStackView = {
@@ -86,11 +90,5 @@ class BookTableViewCell: UITableViewCell {
     stackView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 10).isActive = true
     stackView.leadingAnchor.constraint(equalTo: thumbnailImageView.trailingAnchor, constant: 5).isActive = true
     stackView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -10).isActive = true
-  }
-
-  override func prepareForReuse() {
-    super.prepareForReuse()
-    self.thumbnailImageView.image = UIImage(named: "placeholder.jpg")
-
   }
 }

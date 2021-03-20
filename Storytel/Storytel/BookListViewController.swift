@@ -115,7 +115,6 @@ class BookListViewController: UIViewController {
 }
 
 extension BookListViewController: UITableViewDelegate, UITableViewDataSource {
-
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return viewModel.books.count
   }
@@ -160,16 +159,16 @@ extension BookListViewController {
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     if scrollView.contentOffset.y > Constants.HeaderHeight && isShowingHeader {
       UIView.animate(withDuration: Constants.HeaderAnimationDuration, delay: 0.0, options: .transitionCrossDissolve, animations: {
-        self.headerViewHeightConstraint.constant = self.viewModel.shouldHideHeader ? 0:Constants.HeaderMinimumHeight
+        self.headerViewHeightConstraint.constant = self.viewModel.shouldHideHeader ? 0 : Constants.HeaderMinimumHeight
         self.view.layoutIfNeeded()
-      }, completion: {_ in
+      }, completion: { _ in
         self.isShowingHeader.toggle()
       })
     } else if scrollView.contentOffset.y < Constants.HeaderHeight && !isShowingHeader {
       UIView.animate(withDuration: Constants.HeaderAnimationDuration, delay: 0.0, options: .transitionCrossDissolve, animations: {
         self.headerViewHeightConstraint.constant = Constants.HeaderHeight
         self.view.layoutIfNeeded()
-      }, completion: {_ in
+      }, completion: { _ in
         self.isShowingHeader.toggle()
       })
     }

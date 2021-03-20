@@ -7,11 +7,18 @@
 
 import Foundation
 
-
 enum Request {
   case getBooks(String? = nil)
 
   // MARK: Internal
+
+  var urlRequest: URLRequest {
+    var urlRequest = URLRequest(url: URL(string: endpoint)!)
+    urlRequest.httpMethod = httpMethod
+    return urlRequest
+  }
+
+  // MARK: Private
 
   private var endpoint: String {
     switch self {
@@ -28,12 +35,6 @@ enum Request {
       case .getBooks:
         return "GET"
     }
-  }
-
-  var urlRequest: URLRequest {
-    var urlRequest = URLRequest(url: URL(string: endpoint)!)
-    urlRequest.httpMethod = httpMethod
-    return urlRequest
   }
 }
 

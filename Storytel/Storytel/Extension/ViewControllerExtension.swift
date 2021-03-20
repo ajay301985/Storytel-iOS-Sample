@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 extension UIViewController {
-
   func displayAlertMessage(title: String? = nil, message: String? = nil) {
     DispatchQueue.main.async {
       let alertController = UIAlertController(title: title ?? "Error", message: message ?? "Something went wrong", preferredStyle: .alert)
@@ -18,4 +17,3 @@ extension UIViewController {
     }
   }
 }
-

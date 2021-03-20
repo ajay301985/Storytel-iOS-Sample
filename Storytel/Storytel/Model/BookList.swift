@@ -23,7 +23,7 @@ struct Book: Decodable {
 
 extension Book {
   var authorNameList: String {
-    let authorsName = (authors.map{String($0.name)}).joined(separator: ",")
+    let authorsName = (authors.map { String($0.name) }).joined(separator: ",")
     return "By: \(authorsName)"
   }
 
@@ -32,10 +32,9 @@ extension Book {
       return nil
     }
 
-    let authorsName = (narratorList.map{String($0.name)}).joined(separator: ",")
+    let authorsName = (narratorList.map { String($0.name) }).joined(separator: ",")
     return "With: \(authorsName)"
   }
-
 }
 
 struct Author: Decodable {
@@ -55,7 +54,11 @@ struct Narrator: Decodable {
 }
 
 enum CodingKeys: String, CodingKey {
-  case query, nextPageToken, totalCount, items, cover
+  case query
+  case nextPageToken
+  case totalCount
+  case items
+  case cover
 }
 
 extension BookList {
