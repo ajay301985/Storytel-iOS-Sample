@@ -24,7 +24,6 @@ class HeaderView: UIView {
   override init(frame: CGRect) {
     super.init(frame: frame)
     translatesAutoresizingMaskIntoConstraints = false
-    backgroundColor = .lightGray
     setupViews()
   }
 
@@ -34,6 +33,8 @@ class HeaderView: UIView {
 
   private func setupViews() {
     addSubview(headerTitleLabel)
+
+    headerTitleLabel.topAnchor.constraint(equalTo: topAnchor).isActive = true
     headerTitleLabel.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
     headerTitleLabel.centerYAnchor.constraint(equalTo: centerYAnchor).isActive = true
   }

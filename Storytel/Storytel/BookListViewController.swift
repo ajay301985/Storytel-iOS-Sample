@@ -12,6 +12,7 @@ class BookListViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
+    view.backgroundColor = .white
     setupViews()
     configureTableView()
     loadBooks()
@@ -71,7 +72,7 @@ class BookListViewController: UIViewController {
 
   private func setupViews() {
     view.addSubview(headerView)
-    headerView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+    headerView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor).isActive = true
     headerViewHeightConstraint = headerView.heightAnchor.constraint(equalToConstant: Constants.HeaderHeight)
     headerViewHeightConstraint.isActive = true
     headerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -83,7 +84,7 @@ class BookListViewController: UIViewController {
     tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
 
     view.addSubview(footerView)
-    footerView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    footerView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor).isActive = true
     footerViewHeightConstraint = footerView.heightAnchor.constraint(equalToConstant: 0)
     footerViewHeightConstraint.isActive = true
     footerView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
@@ -93,7 +94,7 @@ class BookListViewController: UIViewController {
 
   private func reloadTableData() {
     DispatchQueue.main.async {
-      UIView.animate(withDuration: 2.0, delay: 0.0, options: .transitionCrossDissolve, animations: {
+      UIView.animate(withDuration: Constants.FooterAnimationDuration, delay: 0.0, options: .transitionCrossDissolve, animations: {
         self.footerViewHeightConstraint.constant = 0
         self.footerView.stopLoading()
         self.view.setNeedsLayout()
@@ -158,19 +159,17 @@ extension BookListViewController: UITableViewDelegate, UITableViewDataSource {
 extension BookListViewController {
   func scrollViewDidScroll(_ scrollView: UIScrollView) {
     if scrollView.contentOffset.y > Constants.HeaderHeight && isShowingHeader {
+      self.isShowingHeader.toggle()
       UIView.animate(withDuration: Constants.HeaderAnimationDuration, delay: 0.0, options: .transitionCrossDissolve, animations: {
         self.headerViewHeightConstraint.constant = self.viewModel.shouldHideHeader ? 0 : Constants.HeaderMinimumHeight
         self.view.layoutIfNeeded()
-      }, completion: { _ in
-        self.isShowingHeader.toggle()
-      })
+      }, completion: nil)
     } else if scrollView.contentOffset.y < Constants.HeaderHeight && !isShowingHeader {
+      self.isShowingHeader.toggle()
       UIView.animate(withDuration: Constants.HeaderAnimationDuration, delay: 0.0, options: .transitionCrossDissolve, animations: {
         self.headerViewHeightConstraint.constant = Constants.HeaderHeight
         self.view.layoutIfNeeded()
-      }, completion: { _ in
-        self.isShowingHeader.toggle()
-      })
+      }, completion: nil)
     }
   }
 }

@@ -15,14 +15,13 @@ import UIKit
 class LoaderView: UIView {
 
   private let activityIndicatorView: UIActivityIndicatorView = {
-    let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+    let activityIndicator = UIActivityIndicatorView(style: .gray)
     activityIndicator.translatesAutoresizingMaskIntoConstraints = false
     return activityIndicator
   }()
 
   override init(frame: CGRect) {
     super.init(frame: frame)
-    backgroundColor = .systemTeal
     translatesAutoresizingMaskIntoConstraints = false
     setupViews()
   }
