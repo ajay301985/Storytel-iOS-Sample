@@ -24,7 +24,7 @@ final class BookViewModel {
     return false
   }
 
-  func getPlaces(completion: @escaping (Bool, NetworkError?) -> Void) {
+  func getBooks(completion: @escaping (Bool, NetworkError?) -> Void) {
     if isLoading == true, books.count == bookList?.totalCount ?? 0 { completion(true, nil)
       return
     }

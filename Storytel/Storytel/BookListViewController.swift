@@ -52,7 +52,7 @@ class BookListViewController: UIViewController {
   private let viewModel = BookViewModel()
 
   private func loadBooks() {
-    viewModel.getPlaces { [weak self] isSuccess, error in
+    viewModel.getBooks { [weak self] isSuccess, error in
       guard let self = self else { return }
       DispatchQueue.main.async {
         if isSuccess {
